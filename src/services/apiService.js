@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const SERVER_URL = "http://172.16.1.201:8383";
+const SERVER_URL = "http://localhost:8383";
+// const SERVER_URL = "http://172.16.1.201:8383";
 // const SERVER_URL = "http://85.133.185.78:8383";
 
 // @asc Get All Services
@@ -10,7 +11,33 @@ export const getAllServices = () => {
     return axios.get(url);
 };
 
-//
+// @asc Get All Category
+// @route GET api/category/
+export const getAllCategory = () => {
+    const url = `${SERVER_URL}/api/category/`;
+    return axios.get(url);
+};
+
+// @asc Get All Category with service_id
+// @route GET api/service/service_id/:service_id
+export const getCategoryByServiceId = (service_id) => {
+    const url = `${SERVER_URL}/api/category/service_id/${service_id}`;
+    return axios.get(url);
+};
+
+// @desc  add category
+// @route POST api/category/add/
+export const addCategory = (category) => {
+    const url = `${SERVER_URL}/api/category/`;
+
+    return axios.post(url, category, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            accept: 'application/json', // If you receieve JSON response.
+        }
+    });
+};
+
 // // @desc Get Api With Api ID
 // // @route GET http://localhost:9090/api/get_api_key/<id_in>/
 // export const getAPI = (apiId) => {
