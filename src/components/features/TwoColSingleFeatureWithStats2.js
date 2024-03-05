@@ -46,7 +46,7 @@ export default ({
       We have been doing this <wbr /> since <span tw="text-primary-500">2018.</span>
     </>
   ),
-  description = "AwidalNoor Company, is archipreneur company that collaborates with prominent companies and experts in the fields of artificial intelligence ,and robotics. AwidAlnoor brings expertise by providing services, solutions, and specialized consultations based on artificial intelligence to help businesses utilize this technology for growth and innovation.",
+  description = "AwidalNoor Company, is archipreneur company that collaborates with prominent companies and experts in the fields of artificial intelligence ,and robotics. AwidAlnoor brings expertise by providing MLoPs, Devops,and Sas based on artificial intelligence to help businesses utilize this technology for growth and innovation.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
@@ -58,8 +58,7 @@ export default ({
   statistics = null,
   textOnLeft = false
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-  //Change the statistics variable as you like, add or delete objects
+
   const defaultStatistics = [
     {
       key: "Clients",

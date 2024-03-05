@@ -14,6 +14,7 @@ import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePic
 //import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import Footer from "components/footers/FiveColumnDark.js";
 //import customerSupportIllustrationSrc from "images/customer-support-illustration.svg";
+import fr from "images/1_Innovation.jpeg"
 
 export default () => (
   <AnimationRevealPage>
@@ -29,17 +30,17 @@ export default () => (
           Our Clients <span tw="text-primary-500">Love Us.</span>
         </>
       }
-      description="Here are what some of our amazing customers are saying about our marketing professionals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description="Here are what some of our amazing customers are saying about our professionals."
       testimonials={[
         {
           imageSrc:
-            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+          fr,
           profileImageSrc:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
+            "https://avatar.iran.liara.run/public/boy?username=Ash",
           quote:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-          customerName: "Charlotte Hale",
-          customerTitle: "CEO, Tesla Inc."
+            "AwidAlnoor was very good and efficient. They were patient when it came to receiving information from me but very diligent when it came to giving information, the best of both worlds. He a brilliant create of product and i will definitely work with him again. I use freelancer all the time and it was hard to find some with this quality of work especially when it comes to mechanical design.",
+          customerName: "Burrell w.",
+          customerTitle: "Design New Product for a Bath tub."
         },
         {
           imageSrc:
