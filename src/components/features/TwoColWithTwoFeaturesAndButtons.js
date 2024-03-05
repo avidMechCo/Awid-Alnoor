@@ -69,7 +69,7 @@ export default ({
     {
       Icon: pr,
       title: "Professionalism",
-      description: "We have the best professional marketing people across the globe just to work with you."
+      description: "We have the best professional in developing in computer vission methods, larg liguestic models, fine tuning,and deep learning models."
     }
   ];
 
