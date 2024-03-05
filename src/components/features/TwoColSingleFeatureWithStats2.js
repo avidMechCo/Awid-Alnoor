@@ -46,7 +46,7 @@ export default ({
       We have been doing this <wbr /> since <span tw="text-primary-500">2018.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "AwidalNoor Company, is archipreneur company that collaborates with prominent companies and experts in the fields of artificial intelligence ,and robotics. AwidAlnoor brings expertise by providing services, solutions, and specialized consultations based on artificial intelligence to help businesses utilize this technology for growth and innovation.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
