@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const SERVER_URL = "http://localhost:8383";
+// const SERVER_URL = "http://localhost:8383";
 // const SERVER_URL = "http://172.16.1.201:8383";
-// const SERVER_URL = "http://85.133.185.78:8383";
+const SERVER_URL = "http://85.133.185.78:9191";
 
 // @asc Get All Services
 // @route GET api/service/
