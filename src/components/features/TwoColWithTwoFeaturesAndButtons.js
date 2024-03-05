@@ -4,9 +4,10 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+//import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
+//import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import  { ReactComponent as pr} from "images/ff.svg"
+import  TeamIllustrationSrc  from "images/team-illustration-2.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -49,7 +50,7 @@ export default ({
   subheading = "Our Expertise",
   heading = (
     <>
-      We have the most <span tw="text-primary-500">professional</span> marketing team.
+      We have the most <span tw="text-primary-500">professional</span> AI team.
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -66,14 +67,9 @@ export default ({
    */
   const defaultFeatures = [
     {
-      Icon: BriefcaseIcon,
+      Icon: pr,
       title: "Professionalism",
       description: "We have the best professional marketing people across the globe just to work with you."
-    },
-    {
-      Icon: MoneyIcon,
-      title: "Affordable",
-      description: "We promise to offer you the best rate we can - at par with the industry standard."
     }
   ];
 
@@ -93,7 +89,7 @@ export default ({
             <Features>
               {features.map((feature, index) => (
                 <Feature key={index}>
-                  <FeatureIconContainer>{<feature.Icon />}</FeatureIconContainer>
+                  <FeatureIconContainer>{<feature.Icon width ={25}/>}</FeatureIconContainer>
                   <FeatureText>
                     <FeatureHeading>{feature.title}</FeatureHeading>
                     <FeatureDescription>{feature.description}</FeatureDescription>

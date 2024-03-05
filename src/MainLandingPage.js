@@ -48,7 +48,7 @@ export default () => (
           profileImageSrc:
             "https://avatar.iran.liara.run/public/16",
           quote:
-            "Sajjad's strengths are in concepts of machine learning, as well as in implementation of advanced machine learning. He is very knowledgeable, also an engineer and hence can make practical sense things. It has been 17 months since we have been collaborating. The solutions work, always!",
+          "AwidAlnoor's strengths are in concepts of machine learning, as well as in implementation of advanced machine learning. He is very knowledgeable, also an engineer and hence can make practical sense things. It has been 17 months since we have been collaborating. The solutions work, always!",
           customerName: "Mujtaba A.",
           customerTitle: "Consultant on AI project"
         }

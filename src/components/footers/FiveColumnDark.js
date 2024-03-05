@@ -6,9 +6,9 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
 
 import LogoImage from "images/ICON.png";
-import { ReactComponent as GithubIcon } from "images/github_4926624.svg";
-import { ReactComponent as InstagramIcon } from "images/instagram_1384031.svg";
-import { ReactComponent as LinkedinIcon } from "images/linkedin_1384030.svg";
+import { ReactComponent as GithubIcon } from "images/gitt.svg";
+import { ReactComponent as InstagramIcon } from "images/insta.svg";
+import { ReactComponent as LinkedinIcon } from "images/link.svg";
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8 `;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
