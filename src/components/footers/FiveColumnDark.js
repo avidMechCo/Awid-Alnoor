@@ -2,18 +2,23 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+
 
 import LogoImage from "images/ICON.png";
-import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
-import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
+import { ReactComponent as GithubIcon } from "images/github_4926624.svg";
+import { ReactComponent as InstagramIcon } from "images/instagram_1384031.svg";
+import { ReactComponent as LinkedinIcon } from "images/linkedin_1384030.svg";
 
-const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8`;
+const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8 `;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
-const FiveColumns = tw.div`flex flex-wrap justify-between`;
+//const FiveColumns = tw.div`flex flex-wrap justify-between`;
 
-const Column = tw.div`w-1/2 md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left`;
-const CompanyColumn = tw.div`text-center md:text-left mb-16 lg:mb-0 w-full lg:w-1/5`;
+
+const FiveColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
+
+const Column = tw.div`px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12`;
+const CompanyColumn = tw.div`text-center md:text-left mb-16 lg:mb-0 w-full lg:w-1/5 px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12`;
 
 const ColumnHeading = tw.h5`font-bold uppercase`;
 
@@ -39,6 +44,13 @@ const CopyrightAndCompanyInfoRow = tw.div`pb-0 text-sm font-normal flex flex-col
 const CopyrightNotice = tw.div``
 const CompanyInfo = tw.div``
 
+const SubscribeNewsletterColumn = tw(Column)`text-center lg:text-left w-full! lg:w-auto! mt-20 lg:mt-12`;
+const SubscribeNewsletterContainer = tw.div`max-w-sm mx-auto lg:mx-0 `;
+const SubscribeText = tw.p`mt-2 lg:mt-6 text-sm font-medium text-white`;
+const SubscribeForm = tw.form`mt-4 lg:mt-6 text-sm sm:flex max-w-xs sm:max-w-none mx-auto sm:mx-0`;
+const Input = tw.input`bg-gray-300 px-6 py-3 rounded sm:rounded-r-none border-2 sm:border-r-0 border-gray-400 hover:border-primary-500 focus:outline-none transition duration-300 w-full `;
+const SubscribeButton = tw(PrimaryButtonBase)`mt-4 sm:mt-0 w-full sm:w-auto rounded sm:rounded-l-none px-8 py-3`;
+
 const Divider = tw.div`my-8 border-b-2 border-gray-800`
 export default () => {
   return (
@@ -57,13 +69,13 @@ export default () => {
             </CompanyAddress>
             <SocialLinksContainer>
               <SocialLink href="https://facebook.com">
-                <FacebookIcon />
+                <GithubIcon/>
               </SocialLink>
               <SocialLink href="https://twitter.com">
-                <TwitterIcon />
+                <InstagramIcon />
               </SocialLink>
               <SocialLink href="https://youtube.com">
-                <YoutubeIcon />
+                <LinkedinIcon />
               </SocialLink>
             </SocialLinksContainer>
           </CompanyColumn>
@@ -85,40 +97,6 @@ export default () => {
             </LinkList>
           </Column>
           <Column>
-            <ColumnHeading>Product</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Log In</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Personal</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Business</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Team</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Legal</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">GDPR</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Privacy Policy</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Terms of Service</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Disclaimer</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
             <ColumnHeading>Contact</ColumnHeading>
             <LinkList>
               <LinkListItem>
@@ -135,6 +113,18 @@ export default () => {
               </LinkListItem>
             </LinkList>
           </Column>
+          <SubscribeNewsletterColumn>
+            <SubscribeNewsletterContainer>
+              <ColumnHeading>Subscribe to our Newsletter</ColumnHeading>
+              <SubscribeText>
+                We deliver high quality blog posts written by professionals weekly. And we promise no spam.
+              </SubscribeText>
+              <SubscribeForm method="get" action="#">
+                <Input type="email" placeholder="Your Email Address" />
+                <SubscribeButton type="submit">Subscribe</SubscribeButton>
+              </SubscribeForm>
+            </SubscribeNewsletterContainer>
+          </SubscribeNewsletterColumn>
         </FiveColumns>
         <Divider/>
         <CopyrightAndCompanyInfoRow>
