@@ -36,7 +36,7 @@ export default () => (
           imageSrc:
           fr,
           profileImageSrc:
-            "https://avatar.iran.liara.run/public/boy?username=Ash",
+            "https://avatar.iran.liara.run/public/59",
           quote:
             "AwidAlnoor was very good and efficient. They were patient when it came to receiving information from me but very diligent when it came to giving information, the best of both worlds. He a brilliant create of product and i will definitely work with him again. I use freelancer all the time and it was hard to find some with this quality of work especially when it comes to mechanical design.",
           customerName: "Burrell w.",
@@ -46,7 +46,7 @@ export default () => (
           imageSrc:
             "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80",
           profileImageSrc:
-            "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+            "https://avatar.iran.liara.run/public/16",
           quote:
             "Sajjad's strengths are in concepts of machine learning, as well as in implementation of advanced machine learning. He is very knowledgeable, also an engineer and hence can make practical sense things. It has been 17 months since we have been collaborating. The solutions work, always!",
           customerName: "Mujtaba A.",
