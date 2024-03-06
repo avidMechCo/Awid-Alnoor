@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+// eslint-disable-next-line
+import { css } from "styled-components/macro"; 
 import {SectionHeading} from "components/misc/Headings.js";
 
 import defaultCardImage from "images/shield-icon.svg";
@@ -73,7 +75,7 @@ export default () => {
     console.log(state)
     return (<Container>
         <ThreeColumnContainer>
-            <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+            <Heading>Our Professional <span tw="text-primary-500"> AI Services</span></Heading>
             {state.map((card, i) => (
                 <Column key={i}>
                     <Card>

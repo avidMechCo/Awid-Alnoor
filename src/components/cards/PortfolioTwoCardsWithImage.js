@@ -65,7 +65,7 @@ export default ({
       We've done amazing <span tw="text-primary-500"> Robatic projects.</span>
     </>
   ),
-  description = "Our mission could be to revolutionize the way we live and work through the application of AI and machine learning technologies. Robotic designs from AwidAlnoure could cover a wide range of applications — from automating industrial processes to developing smart home devices or robotic personal assistants.",
+  description = "Our mission is revolutionizing the way we live and work through the application of AI and machine learning technologies. Robotic designs from AwidAlnoor could cover a wide range of applications — from automating industrial processes to developing smart home devices or robotic personal assistants.",
   linkText = "View all Projects",
   cardLinkText = "See project",
   textOnLeft = false
@@ -74,20 +74,20 @@ export default ({
     {
       imageSrc:
       bed,
-      Project: "Tesla Inc.",
-      type: "Ad Campaign",
+      Project: "Comfort  smart bed.",
+      type: "Medicine",
       title: "Personalized Ad Campaign using Google AdWords",
-      durationText: "90 Days Campaign",
-      locationText: "New York"
+      durationText: "720 Days production",
+      locationText: "Russia"
     },
     {
       imageSrc:
       perfum,
-      Project: "Nestle",
-      type: "SEO Marketing",
+      Project: "Automatic dispenser",
+      type: "perfume",
       title: "Ranking #1 for keywords like Chocolate, Snack",
-      durationText: "180 Day Campaign",
-      locationText: "Palo Alto"
+      durationText: "90 Days production",
+      locationText: "UAE"
     }
   ];
   return (
