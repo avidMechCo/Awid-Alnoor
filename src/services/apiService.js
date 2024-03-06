@@ -38,6 +38,21 @@ export const addCategory = (category) => {
     });
 };
 
+
+// @asc Get All Article
+// @route GET api/article/
+export const getAllArticle = () => {
+    const url = `${SERVER_URL}/api/article/`;
+    return axios.get(url);
+};
+
+// @asc Get Article that should show
+// @route GET api/article/show/
+export const getShowArticle = () => {
+    const url = `${SERVER_URL}/api/article/show/`;
+    return axios.get(url);
+};
+
 // // @desc Get Api With Api ID
 // // @route GET http://localhost:9090/api/get_api_key/<id_in>/
 // export const getAPI = (apiId) => {
