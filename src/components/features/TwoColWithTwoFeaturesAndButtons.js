@@ -53,7 +53,7 @@ export default ({
       We have the most <span tw="text-primary-500">professional</span> AI team.
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "Our team believes in harnessing the power of AI to revolutionize the archeology field. They develop smart tools and machines that can explore and analyze historical sites with minimal human intervention, reducing the risk of damage and enabling more accurate data collection. ",
   primaryButtonText = "See Our Portfolio",
   primaryButtonUrl = "https://timerse.com",
   features = null,

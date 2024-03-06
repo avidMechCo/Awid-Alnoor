@@ -8,6 +8,8 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
 import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
+import bed from "images/poster-AVIDMED-2048x1448.jpg"
+import perfum from "images/perfum.jpg"
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -39,7 +41,7 @@ const CardImage = styled.div(props => [
 const CardText = tw.div`mt-4`;
 
 const CardHeader = tw.div`flex justify-between items-center`;
-const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
+const CardProject = tw.div`text-primary-500 font-bold text-lg`;
 const CardType = tw.div`font-semibold text-sm text-gray-600`;
 
 const CardTitle = tw.h5`text-xl mt-4 font-bold`;
@@ -57,22 +59,22 @@ const CardMetaFeature = styled.div`
 const CardAction = tw(PrimaryButtonBase)`w-full mt-6`;
 
 export default ({
-  subheading = "Our Portfolio",
+  subheading = "Service",
   headingHtmlComponent = (
     <>
-      We've done some <span tw="text-primary-500">amazing projects.</span>
+      We've done amazing <span tw="text-primary-500"> Robatic projects.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
+  description = "Our mission could be to revolutionize the way we live and work through the application of AI and machine learning technologies. Robotic designs from AwidAlnoure could cover a wide range of applications — from automating industrial processes to developing smart home devices or robotic personal assistants.",
   linkText = "View all Projects",
-  cardLinkText = "Read Case Study",
+  cardLinkText = "See project",
   textOnLeft = false
 }) => {
   const cards = [
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1563461660947-507ef49e9c47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Tesla Inc.",
+      bed,
+      Project: "Tesla Inc.",
       type: "Ad Campaign",
       title: "Personalized Ad Campaign using Google AdWords",
       durationText: "90 Days Campaign",
@@ -80,8 +82,8 @@ export default ({
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1573165231977-3f0e27806045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Nestle",
+      perfum,
+      Project: "Nestle",
       type: "SEO Marketing",
       title: "Ranking #1 for keywords like Chocolate, Snack",
       durationText: "180 Day Campaign",
@@ -108,7 +110,7 @@ export default ({
                 <CardImage imageSrc={card.imageSrc} />
                 <CardText>
                   <CardHeader>
-                    <CardCompany>{card.company}</CardCompany>
+                    <CardProject>{card.Project}</CardProject>
                     <CardType>{card.type}</CardType>
                   </CardHeader>
                   <CardTitle>{card.title}</CardTitle>

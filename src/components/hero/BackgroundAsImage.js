@@ -17,7 +17,7 @@ const StyledHeader = styled(Header)`
   }
 `;
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
+  ${tw`relative -mx-8 -mt-10 bg-center bg-cover`}
   background-image: url(${backgroundImage});
 `;
 
@@ -88,9 +88,9 @@ export default () => {
           <LeftColumn>
             <Notification>We have now launched operations in Emarat.</Notification>
             <Heading>
-              <span>Hire the best</span>
-              <br />
-              <SlantedBackground>AI Team.</SlantedBackground>
+              <span>Unleash power</span>
+              
+              <SlantedBackground>of AI.</SlantedBackground>
             </Heading>
             <PrimaryAction>Read Customer Stories</PrimaryAction>
           </LeftColumn>
