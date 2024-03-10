@@ -2,11 +2,12 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import backgroundImage from 'images/unnamed.jpg';
 
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
-  ${tw`pt-8 max-w-none w-full`}
+  ${tw`pt-8 max-w-none`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300`}
   }
@@ -15,15 +16,19 @@ const StyledHeader = styled(Header)`
   }
 `;
 
+
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
-  background-image: url("https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
+  ${tw`relative -mx-8 -mt-8 bg-center bg-cover  min-h-144`}
+  background-image: url(${backgroundImage});
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
 
-const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
+
+//const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
+
+const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto h-full  `;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
 
 const Heading = styled.h1`
@@ -33,7 +38,7 @@ const Heading = styled.h1`
   }
 `;
 
-const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
+//const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
 export default () => {
   const navLinks = [
@@ -45,10 +50,10 @@ export default () => {
         Blog
       </NavLink>
       <NavLink href="#">
-        Locations
+        services
       </NavLink>
       <NavLink href="#">
-        Pricing
+        projects
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
@@ -63,13 +68,17 @@ export default () => {
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
+        <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
         <Content>
           <Heading>
-              Book Music & Comedy Events
-              <br />
-              anywhere in New York
+              Artifical Intelligence
           </Heading>
-          <PrimaryAction>Search Events Near Me</PrimaryAction>
+          {/*<PrimaryAction>Search Events Near Me</PrimaryAction>*/}
         </Content>
       </HeroContainer>
     </Container>
