@@ -9,7 +9,7 @@ import Footer from "components/footers/FiveColumnDark.js";
 export default () => (
   <AnimationRevealPage>
     <Hero />
-    <Features />
+    <Features service_id = {1}/>
     
     <Footer />
   </AnimationRevealPage>

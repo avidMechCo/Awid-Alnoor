@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -9,6 +9,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+import {getCategoryByServiceId} from "../../services/apiService";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -30,8 +31,8 @@ const CardImageContainer = styled.div`
   ${props => css`background-image: url("${props.imageSrc}");`}
   ${tw`h-56 xl:h-64 bg-center bg-cover relative rounded-t`}
 `;
-const CardRatingContainer = tw.div`leading-none absolute inline-flex bg-gray-100 bottom-0 left-0 ml-4 mb-4 rounded-full px-5 py-2 items-end`;
-const CardRating = styled.div`
+const CardRelatedContainer = tw.div`leading-none absolute inline-flex bg-gray-100 bottom-0 left-0 ml-4 mb-4 rounded-full px-5 py-2 items-end`;
+const CardRelated = styled.div`
   ${tw`mr-1 text-sm font-bold flex items-end`}
   svg {
     ${tw`w-4 h-4 fill-current text-orange-400 mr-1`}
@@ -60,17 +61,24 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 const topicNames = ["Computer Vision", "NLP", "Expert System", "Fuzzy Control", "Hybrid System"];
 
 
+
 export default ({
-  heading = "services",
-  tabs = {
+  service_id,
+  heading = "services",  
+}) => {
+  /*
+   * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
+   * as the key and value of the key will be its content (as an array of objects).
+   * To see what attributes are configurable of each object inside this array see the example above for "Starters".
+   */
+  const tabs = {
     [topicNames[0]]: [
       {
         imageSrc:
           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
         title: "Veg Mixer",
         content: "Tomato Salad & Carrot",
-        price: "$5.99",
-        rating: "5.0",
+        related: "5.0",
         reviews: "87",
         url: "#"
       },
@@ -79,8 +87,7 @@ export default ({
           "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
         title: "Macaroni",
         content: "Cheese Pizza",
-        price: "$2.99",
-        rating: "4.8",
+        related: "4.8",
         reviews: "32",
         url: "#"
       },
@@ -90,7 +97,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
       },
@@ -100,7 +107,7 @@ export default ({
         title: "Carnet Nachos",
         content: "Chilli Crispy Nachos",
         price: "$3.99",
-        rating: "3.9",
+        related: "3.9",
         reviews: "26",
         url: "#"
       }
@@ -112,7 +119,7 @@ export default ({
         title: "Veg Mixer",
         content: "Tomato Salad & Carrot",
         price: "$5.99",
-        rating: "5.0",
+        related: "5.0",
         reviews: "87",
         url: "#"
       },
@@ -122,7 +129,7 @@ export default ({
         title: "Macaroni",
         content: "Cheese Pizza",
         price: "$2.99",
-        rating: "4.8",
+        related: "4.8",
         reviews: "32",
         url: "#"
       },
@@ -132,7 +139,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
       },
@@ -142,7 +149,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
       }],
@@ -153,7 +160,7 @@ export default ({
         title: "Veg Mixer",
         content: "Tomato Salad & Carrot",
         price: "$5.99",
-        rating: "5.0",
+        related: "5.0",
         reviews: "87",
         url: "#"
       },
@@ -163,7 +170,7 @@ export default ({
         title: "Macaroni",
         content: "Cheese Pizza",
         price: "$2.99",
-        rating: "4.8",
+        related: "4.8",
         reviews: "32",
         url: "#"
       },
@@ -173,7 +180,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        relatingated: "4.9",
         reviews: "89",
         url: "#"
       },
@@ -183,7 +190,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
       }],
@@ -194,7 +201,7 @@ export default ({
         title: "Veg Mixer",
         content: "Tomato Salad & Carrot",
         price: "$5.99",
-        rating: "5.0",
+        related: "5.0",
         reviews: "87",
         url: "#"
       },
@@ -204,7 +211,7 @@ export default ({
         title: "Macaroni",
         content: "Cheese Pizza",
         price: "$2.99",
-        rating: "4.8",
+        related: "4.8",
         reviews: "32",
         url: "#"
       },
@@ -214,7 +221,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
       },
@@ -224,7 +231,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
       }],
@@ -235,7 +242,7 @@ export default ({
         title: "Veg Mixer",
         content: "Tomato Salad & Carrot",
         price: "$5.99",
-        rating: "5.0",
+        related: "5.0",
         reviews: "87",
         url: "#"
       },
@@ -245,7 +252,7 @@ export default ({
         title: "Macaroni",
         content: "Cheese Pizza",
         price: "$2.99",
-        rating: "4.8",
+        related: "4.8",
         reviews: "32",
         url: "#"
       },
@@ -255,7 +262,7 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
       },
@@ -265,20 +272,30 @@ export default ({
         title: "Nelli",
         content: "Hamburger & Fries",
         price: "$7.99",
-        rating: "4.9",
+        related: "4.9",
         reviews: "89",
         url: "#"
-      }]
-  }
-}) => {
-  /*
-   * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
-   * as the key and value of the key will be its content (as an array of objects).
-   * To see what attributes are configurable of each object inside this array see the example above for "Starters".
-   */
+      }]}
+
   const tabsKeys = Object.keys(tabs);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
+  
+  const [category, setCategory] = useState([]);
 
+  useEffect(() => {
+      const fetchData = async () => {
+          try {
+              const {data: Services} = await getCategoryByServiceId(service_id);
+              setCategory(Services);
+
+          } catch (err) {
+              console.log(err);
+          }
+      };
+
+      fetchData();
+  }, []);
+  console.log(category)
   return (
     <Container>
       <ContentWithPaddingXl>
@@ -316,13 +333,13 @@ export default ({
               <CardContainer key={index}>
                 <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
                   <CardImageContainer imageSrc={card.imageSrc}>
-                    <CardRatingContainer>
-                      <CardRating>
+                    <CardRelatedContainer>
+                      <CardRelated>
                         <StarIcon />
-                        {card.rating}
-                      </CardRating>
+                        {card.related}
+                      </CardRelated>
                       <CardReview>({card.reviews})</CardReview>
-                    </CardRatingContainer>
+                    </CardRelatedContainer>
                     <CardHoverOverlay
                       variants={{
                         hover: {
@@ -342,7 +359,6 @@ export default ({
                   <CardText>
                     <CardTitle>{card.title}</CardTitle>
                     <CardContent>{card.content}</CardContent>
-                    <CardPrice>{card.price}</CardPrice>
                   </CardText>
                 </Card>
               </CardContainer>
