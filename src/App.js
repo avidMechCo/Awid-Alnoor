@@ -106,6 +106,8 @@ import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Robatic from "pages/Robatic";
+import AboutUs from "pages/AboutUs";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -122,6 +124,8 @@ export default function App() {
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/" element={<MainLandingPage />} />
           <Route path="/AIservices" element={<AIservices />} />
+          <Route path="/Robatic" element={<Robatic />} />
+          <Route path="/About" element={<AboutUs />} />
 
         </Routes>
       </Router>

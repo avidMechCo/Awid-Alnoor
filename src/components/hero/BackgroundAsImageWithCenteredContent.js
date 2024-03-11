@@ -76,7 +76,7 @@ export default () => {
        <br />
         <Content>
           <Heading>
-              Artifical Intelligence
+          Electro Mechanic
           </Heading>
           {/*<PrimaryAction>Search Events Near Me</PrimaryAction>*/}
         </Content>

@@ -27,7 +27,7 @@ const Card = styled.div`
     .imageContainer {
         ${tw`border-2 border-primary-500 text-center rounded-full p-6 flex-shrink-0 relative`}
         img {
-            ${tw`w-8 h-8`}
+            ${tw`w-12 h-12`}
         }
     }
 
