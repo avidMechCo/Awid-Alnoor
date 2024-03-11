@@ -72,7 +72,6 @@ export default () => {
 
         fetchData();
     }, []);
-    console.log(state)
     return (<Container>
         <ThreeColumnContainer>
             <Heading>Our Professional <span tw="text-primary-500"> AI Services</span></Heading>
