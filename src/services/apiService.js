@@ -2,6 +2,7 @@ import axios from "axios";
 
 // const SERVER_URL = "http://localhost:8383";
 // const SERVER_URL = "http://172.16.1.201:8383";
+// const SERVER_URL = "http://192.168.88.80:9191";
 const SERVER_URL = "http://85.133.185.78:9191";
 
 // @asc Get All Services
@@ -22,6 +23,12 @@ export const getAllCategory = () => {
 // @route GET api/service/service_id/:service_id
 export const getCategoryByServiceId = (service_id) => {
     const url = `${SERVER_URL}/api/category/service_id/${service_id}`;
+    return axios.get(url);
+};
+// @asc Get All Category with service_id
+// @route GET api/service/service_id/:service_id
+export const getCategoryProductByServiceId = (service_id) => {
+    const url = `${SERVER_URL}/api/category/service_id/with_pro/${service_id}`;
     return axios.get(url);
 };
 

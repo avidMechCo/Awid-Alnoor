@@ -9,7 +9,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
-import {getCategoryByServiceId} from "../../services/apiService";
+import { getCategoryProductByServiceId} from "../../services/apiService";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -271,7 +271,7 @@ export default ({
   useEffect(() => {
       const fetchData = async () => {
           try {
-              const {data: Services} = await getCategoryByServiceId(service_id);
+              const {data: Services} = await getCategoryProductByServiceId(1);
               setCategory(Services);
 
           } catch (err) {
