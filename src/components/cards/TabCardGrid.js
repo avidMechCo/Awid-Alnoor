@@ -336,7 +336,7 @@ export default ({
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <CardButton>More</CardButton>
+                      <CardButton>Show More</CardButton>
                     </CardHoverOverlay>
                   </CardImageContainer>
                   <CardText>
