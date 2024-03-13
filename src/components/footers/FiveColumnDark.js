@@ -60,12 +60,12 @@ export default () => {
           <CompanyColumn>
             <LogoContainer>
               <LogoImg src={LogoImage} />
-              <LogoText>Treact Inc.</LogoText>
+              <LogoText>AwidAlnoor</LogoText>
             </LogoContainer>
             <CompanyAddress>
-              123 Road, New Startup Building
-              Carter Road, San Francisco
-              California 40234
+            Dubaie,
+            Alkhabeesi, Albahar building,
+            flat number
             </CompanyAddress>
             <SocialLinksContainer>
               <SocialLink href="https://facebook.com">
@@ -100,13 +100,13 @@ export default () => {
             <ColumnHeading>Contact</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                +1 (234) (567)-8901
+                +97 (152) (442)-7403
               </LinkListItem>
               <LinkListItem>
-                <Link href="mailto:support@servana.com">support@servana.com</Link>
+                <Link href="mailto:avidmechco@gmail.com">avidmechco@gmail.com</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Sales</Link>
+                <Link href="#">Hire us</Link>
               </LinkListItem>
               <LinkListItem>
                 <Link href="#">Report Abuse</Link>

@@ -10,6 +10,19 @@ import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 import { getCategoryProductByServiceId} from "../../services/apiService";
+import {getCategoryByServiceId} from "../../services/apiService";
+import SNN from "images/SNN-architectures.jpg"
+import Ergonomy from "images/ergo.png"
+import face from "images/face.png"
+import Age from "images/Age-detector-1.png"
+import cyberbulying from "images/cyber.webp"
+import translation from "images/translation.webp"
+import segmentation from "images/segmentation.jpg"
+import recognition from "images/recognition.jpg"
+import movement from "images/movement.png"
+import H1N1 from "images/H1N1.jpg"
+import emotion from "images/emtion.jpg"
+import bed from "images/Bed.jpg"
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -74,37 +87,33 @@ export default ({
   const tabs = {
     [topicNames[0]]: [
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
+        imageSrc:SNN,
+        title: "Object detetction in night",
+        content: "SNN for fast and acuuracyt object detetction in night",
         related: "5.0",
         reviews: "87",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
+        imageSrc:Ergonomy,
+        title: "Ergonomy detection",
+        content: "Ergonomy detection using convolution based on nueral netwrok",
         related: "4.8",
         reviews: "32",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
+        imageSrc:face,
+        title: "Face recognition",
+        content: "Face recognition using the predefined model.",
         related: "4.9",
         reviews: "89",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1565310022184-f23a884f29da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Carnet Nachos",
-        content: "Chilli Crispy Nachos",
+        imageSrc:Age,
+        title: "Age & gender detetcion",
+        content: "Detetcion using combination of deep and machine learning models.",
         related: "3.9",
         reviews: "26",
         url: "#"
@@ -112,75 +121,66 @@ export default ({
     ],
     [topicNames[1]]: [
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
+        imageSrc: cyberbulying,
+        title: "Detetcing the cyberbulying",
+        content: "Detetcing the cyberbulying activities in social media platforms like Twitter",
         related: "5.0",
         reviews: "87",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
+        imageSrc:translation,
+        title: "Smoth translation",
+        content: " Translation in French, Spanish, Arabic, to English",
         related: "4.8",
         reviews: "32",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
+        imageSrc: segmentation,
+        title: "Tokenization model",
+        content: "Developing tokenization model for segmentation, steming, and name entity recognition.",
         related: "4.9",
         reviews: "89",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
+        imageSrc:recognition,
+        title: "Emotion recognition",
+        content: "Emotion recognition via the contextual information using the transformer model.",
         related: "4.9",
         reviews: "89",
         url: "#"
       }],
     [topicNames[2]]:[
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
+        imageSrc: movement,
+        title: "Detetcing body movement",
+        content: "Using combination of transfer leraning and Resnet 32 network",
         related: "5.0",
         reviews: "87",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
+        imageSrc: H1N1,
+        title: "Discriminating",
+        content: "Betweeen H1N1 Influenza and COVID-19 using combination of CNN and PSO",
         related: "4.8",
         reviews: "32",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        
-        relatingated: "4.9",
-        reviews: "89",
+        imageSrc: emotion,
+        title: "Detecting face emotion",
+        content: "Detecting face emotion using fused transformers models",
+        related: "4.8",
+        reviews: "32",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
+        imageSrc:bed,
+        title: "The hospital beds",
+        content: "Managing the hospital beds using CNN with GA for length of Stay predictio",
         related: "4.9",
         reviews: "89",
         url: "#"
