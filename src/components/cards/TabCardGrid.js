@@ -10,7 +10,6 @@ import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 import { getCategoryProductByServiceId} from "../../services/apiService";
-import {getCategoryByServiceId} from "../../services/apiService";
 import SNN from "images/SNN-architectures.jpg"
 import Ergonomy from "images/ergo.png"
 import face from "images/face.png"
@@ -23,6 +22,10 @@ import movement from "images/movement.png"
 import H1N1 from "images/H1N1.jpg"
 import emotion from "images/emtion.jpg"
 import bed from "images/Bed.jpg"
+import cnn from "images/as.png"
+import cyber from "images/cyber.png"
+import unet from "images/Unet.png"
+import yolo from "images/yolo.png"
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -71,7 +74,7 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-primary-500`}
 `;
-const topicNames = ["Computer Vision", "NLP", "Expert System", "Fuzzy Control", "Hybrid System"];
+const topicNames = ["Computer Vision", "NLP", "Expert System", "Hybrid System"];
 
 
 
@@ -187,76 +190,35 @@ export default ({
       }],
     [topicNames[3]]: [
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
+        imageSrc: cnn,
+        title: "CNN optimized",
+        content: "Combination of CNN optimized with GWO and WO for cyberbullying detetcion.",
         related: "5.0",
         reviews: "87",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
-        related: "4.8",
-        reviews: "32",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        related: "4.9",
-        reviews: "89",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        related: "4.9",
-        reviews: "89",
-        url: "#"
-      }],
-    [topicNames[4]]: [
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
-        related: "5.0",
-        reviews: "87",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
+        imageSrc:cyber,
+        title: "cybersecurity classiifcation",
+        content: "Combination for the CNN with RF and SCM for cybersecurity classiifcation.",
         price: "$2.99",
         related: "4.8",
         reviews: "32",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
+        imageSrc: unet,
+        title: "percitipant level forecasting",
+        content: "Combining Unet with genetic algorithm for percitipant level forecasting.",
         price: "$7.99",
         related: "4.9",
         reviews: "89",
         url: "#"
       },
       {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
+        imageSrc: yolo,
+        title: "object detetcion",
+        content: "Combining Yolo 7 with genetic algorithm for customized object detetcion.",
         price: "$7.99",
         related: "4.9",
         reviews: "89",

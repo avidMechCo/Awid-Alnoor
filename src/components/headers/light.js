@@ -71,17 +71,28 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
   const defaultLinks = [
-    <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink>
-    </NavLinks>
-  ];
+
+      <NavLinks key={1}>
+        <NavLink href="#">
+          About Us
+        </NavLink>
+        <NavLink href="#">
+          Blog
+        </NavLink>
+        <NavLink href="#">
+          services
+        </NavLink>
+        <NavLink href="#">
+          projects
+        </NavLink>
+      </NavLinks>,
+      <NavLinks key={2}>
+        <PrimaryLink href="/#">
+          Hire Us
+        </PrimaryLink>
+      </NavLinks>
+    ];
+
 
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];

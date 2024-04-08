@@ -1,15 +1,17 @@
-import React, {useEffect, useState} from "react"; 
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+// import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+import { ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { SectionHeading } from "components/misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import { ReactComponent as StarIcon } from "images/star-icon.svg";
-import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
-import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
-import {getCategoryByServiceId} from "../../services/apiService";
+//import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+//import { ReactComponent as StarIcon } from "images/star-icon.svg";
+//import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
+//import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+import { getCategoryByServiceId } from "../../services/apiService";
+import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -24,47 +26,53 @@ const TabControl = styled.div`
   }
 `;
 
-const TabContent = tw(motion.div)`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
-const CardContainer = tw.div`mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12`;
-const Card = tw(motion.a)`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0`;
-const CardImageContainer = styled.div`
-  ${props => css`background-image: url("${props.imageSrc}");`}
-  ${tw`h-56 xl:h-64 bg-center bg-cover relative rounded-t`}
-`;
-const CardRelatedContainer = tw.div`leading-none absolute inline-flex bg-gray-100 bottom-0 left-0 ml-4 mb-4 rounded-full px-5 py-2 items-end`;
-const CardRelated = styled.div`
-  ${tw`mr-1 text-sm font-bold flex items-end`}
-  svg {
-    ${tw`w-4 h-4 fill-current text-orange-400 mr-1`}
-  }
-`;
+const TabContent = tw(motion.div)`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12 justify-center whitespace-normal`;
 
-const CardHoverOverlay = styled(motion.div)`
-  background-color: rgba(255, 255, 255, 0.5);
-  ${tw`absolute inset-0 flex justify-center items-center`}
-`;
-const CardButton = tw(PrimaryButtonBase)`text-sm`;
+const CardContainer = tw.div`mt-16 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12 flex justify-center max-w-full whitespace-pre-line`;
+const Container = tw.div`relative`;
 
-const CardReview = tw.div`font-medium text-xs text-gray-600`;
+const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
-const CardText = tw.div`p-4 text-gray-900`;
-const CardTitle = tw.h5`text-lg font-semibold group-hover:text-primary-500`;
-const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;
-//const CardPrice = tw.p`mt-4 text-xl font-bold`;
+const HeadingInfoContainer = tw.div`flex flex-col items-center`;
+const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`;
 
-const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
-  ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-64 w-64 opacity-15 transform translate-x-2/3 -translate-y-12 text-pink-400`}
-`;
-const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-  ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-primary-500`}
-`;
+const Content = tw.div`mt-16`;
+
+const Card = styled.div(props => [
+  tw`mt-24 md:flex justify-center items-center`,
+  props.reversed ? tw`flex-row-reverse` : "flex-row"
+]);
+const Image = styled.div(props => [
+  `background-image: url("${props.imageSrc}");`,
+  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-144 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`
+]);
+const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`;
+const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`;
+const Title = tw.h4`text-3xl font-bold text-gray-900`;
+const Description = tw.p`mt-2 text-sm leading-loose`;
+const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`;
+
+// const SvgDotPattern1 = tw(
+//   SvgDotPatternIcon
+// )`absolute top-0 left-0 transform -translate-x-20 rotate-90 translate-y-8 -z-10 opacity-25 text-primary-500 fill-current w-24`;
+// const SvgDotPattern2 = tw(
+//   SvgDotPatternIcon
+// )`absolute top-0 right-0 transform translate-x-20 rotate-45 translate-y-24 -z-10 opacity-25 text-primary-500 fill-current w-24`;
+// const SvgDotPattern3 = tw(
+//   SvgDotPatternIcon
+// )`absolute bottom-0 left-0 transform -translate-x-20 rotate-45 -translate-y-8 -z-10 opacity-25 text-primary-500 fill-current w-24`;
+// const SvgDotPattern4 = tw(
+//   SvgDotPatternIcon
+// )`absolute bottom-0 right-0 transform translate-x-20 rotate-90 -translate-y-24 -z-10 opacity-25 text-primary-500 fill-current w-24`;
+
+
 const topicNames = ["Autonomous", "Arm Robot", "Medical Robots"];
 
 
 
 export default ({
   service_id,
-  heading = "services",  
+  heading = "services",
 }) => {
   /*
    * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
@@ -75,138 +83,58 @@ export default ({
     [topicNames[0]]: [
       {
         imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
-        related: "5.0",
-        reviews: "87",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
-        related: "4.8",
-        reviews: "32",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        related: "4.9",
-        reviews: "89",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1565310022184-f23a884f29da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Carnet Nachos",
-        content: "Chilli Crispy Nachos",
-        related: "3.9",
-        reviews: "26",
-        url: "#"
+          "https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
+        subtitle: "Paid",
+        title: "Loachella, NYC",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        url: "https://timerse.com"
       }
     ],
     [topicNames[1]]: [
       {
         imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
-        related: "5.0",
-        reviews: "87",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
-        related: "4.8",
-        reviews: "32",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        related: "4.9",
-        reviews: "89",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        related: "4.9",
-        reviews: "89",
-        url: "#"
+          "https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
+        subtitle: "Paid",
+        title: "Loachella, NYC",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        url: "https://timerse.com"
       }],
-    [topicNames[2]]:[
+    [topicNames[2]]: [
       {
         imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
-        related: "5.0",
-        reviews: "87",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
-        related: "4.8",
-        reviews: "32",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        
-        relatingated: "4.9",
-        reviews: "89",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        related: "4.9",
-        reviews: "89",
-        url: "#"
-      }]}
+          "https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
+        subtitle: "Paid",
+        title: "Loachella, NYC",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        url: "https://timerse.com"
+      }]
+  }
 
   const tabsKeys = Object.keys(tabs);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
-  
+
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
-      const fetchData = async () => {
-          try {
-              const {data: Services} = await getCategoryByServiceId(service_id);
-              setCategory(Services);
+    const fetchData = async () => {
+      try {
+        const { data: Services } = await getCategoryByServiceId(service_id);
+        setCategory(Services);
 
-          } catch (err) {
-              console.log(err);
-          }
-      };
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-      fetchData();
+    fetchData();
   }, []);
   console.log(category)
   return (
     <Container>
+
       <ContentWithPaddingXl>
         <HeaderRow>
           <Header>{heading}</Header>
@@ -225,12 +153,12 @@ export default ({
             variants={{
               current: {
                 opacity: 1,
-                scale:1,
+                scale: 1,
                 display: "flex",
               },
               hidden: {
                 opacity: 0,
-                scale:0.8,
+                scale: 0.8,
                 display: "none",
               }
             }}
@@ -239,44 +167,65 @@ export default ({
             animate={activeTab === tabKey ? "current" : "hidden"}
           >
             {tabs[tabKey].map((card, index) => (
+
               <CardContainer key={index}>
-                <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
-                  <CardImageContainer imageSrc={card.imageSrc}>
-                    <CardRelatedContainer>
-                      <CardRelated>
-                        <StarIcon />
-                        {card.related}
-                      </CardRelated>
-                      <CardReview>({card.reviews})</CardReview>
-                    </CardRelatedContainer>
-                    <CardHoverOverlay
-                      variants={{
-                        hover: {
-                          opacity: 1,
-                          height: "auto"
-                        },
-                        rest: {
-                          opacity: 0,
-                          height: 0
-                        }
-                      }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <CardButton>Show More</CardButton>
-                    </CardHoverOverlay>
-                  </CardImageContainer>
-                  <CardText>
-                    <CardTitle>{card.title}</CardTitle>
-                    <CardContent>{card.content}</CardContent>
-                  </CardText>
-                </Card>
+                
+                <HeadingInfoContainer>
+                  <HeadingTitle>Automatic perfume dispenser</HeadingTitle>
+                  <HeadingDescription>
+                  Dispenser efficiently Delivers fragrances with precision and convenience, enhancing any environment with a touch of elegance and freshness.
+                  </HeadingDescription>
+                </HeadingInfoContainer>
+                
+                  <Card key={index} reversed={index % 2 === 1}>
+                    <Image imageSrc={card.imageSrc} />
+                    <Details>
+                      <Subtitle>{card.subtitle}</Subtitle>
+                      <Title>{card.title}</Title>
+                      <Description>{card.description}</Description>
+                      <Link href={card.url}>See Event Details</Link>
+                    </Details>
+                  </Card>
+             
               </CardContainer>
+              //                <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
+              //                  <CardImageContainer imageSrc={card.imageSrc}>
+              //                    <CardRelatedContainer>
+              //                      <CardRelated>
+              //                        <StarIcon />
+              //                        {card.related}
+              //                      </CardRelated>
+              //                      <CardReview>({card.reviews})</CardReview>
+              //                    </CardRelatedContainer>
+              //                    <CardHoverOverlay
+              //                      variants={{
+              //                        hover: {
+              //                          opacity: 1,
+              //                          height: "auto"
+              //                        },
+              //                        rest: {
+              //                          opacity: 0,
+              //                          height: 0
+              //                        }
+              //                      }}
+              //                      transition={{ duration: 0.3 }}
+              //                    >
+              //                      <CardButton>Show More</CardButton>
+              //                    </CardHoverOverlay>
+              //                  </CardImageContainer>
+              //                  <CardText>
+              //                    <CardTitle>{card.title}</CardTitle>
+              //                    <CardContent>{card.content}</CardContent>
+              //                  </CardText>
+              //                </Card>
+
+
             ))}
           </TabContent>
         ))}
       </ContentWithPaddingXl>
-      <DecoratorBlob1 />
-      <DecoratorBlob2 />
+      {/* <DecoratorBlob1 /> */}
+      {/* <DecoratorBlob2 /> */}
     </Container>
   );
 };
