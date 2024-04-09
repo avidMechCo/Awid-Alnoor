@@ -65,34 +65,34 @@ export default () => {
             <CompanyAddress>
             Dubaie,
             Alkhabeesi, Albahar building,
-            flat number
+            flat number 549
             </CompanyAddress>
             <SocialLinksContainer>
-              <SocialLink href="https://facebook.com">
+              {/* <SocialLink href="https://facebook.com">
                 <GithubIcon/>
               </SocialLink>
               <SocialLink href="https://twitter.com">
                 <InstagramIcon />
-              </SocialLink>
-              <SocialLink href="https://youtube.com">
+              </SocialLink> */}
+              {/* <SocialLink href="https://youtube.com">
                 <LinkedinIcon />
-              </SocialLink>
+              </SocialLink> */}
             </SocialLinksContainer>
           </CompanyColumn>
           <Column>
             <ColumnHeading>Quick Links</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Blog</Link>
+                <Link href="/Blog">Blog</Link>
               </LinkListItem>
-              <LinkListItem>
+              {/* <LinkListItem>
                 <Link href="#">FAQs</Link>
-              </LinkListItem>
-              <LinkListItem>
+              </LinkListItem> */}
+              {/* <LinkListItem>
                 <Link href="#">Support</Link>
-              </LinkListItem>
+              </LinkListItem> */}
               <LinkListItem>
-                <Link href="#">About Us</Link>
+                <Link href="/About">About Us</Link>
               </LinkListItem>
             </LinkList>
           </Column>
@@ -103,14 +103,14 @@ export default () => {
                 +97 (152) (442)-7403
               </LinkListItem>
               <LinkListItem>
-                <Link href="mailto:avidmechco@gmail.com">avidmechco@gmail.com</Link>
+                <Link href="mailto:awidalnoor@gmail.com">awidalnoor@gmail.com</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Hire us</Link>
+                <Link href="/Contact">Contact Us</Link>
               </LinkListItem>
-              <LinkListItem>
+              {/* <LinkListItem>
                 <Link href="#">Report Abuse</Link>
-              </LinkListItem>
+              </LinkListItem> */}
             </LinkList>
           </Column>
           <SubscribeNewsletterColumn>

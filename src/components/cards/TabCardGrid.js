@@ -281,13 +281,13 @@ export default ({
               <CardContainer key={index}>
                 <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
                   <CardImageContainer imageSrc={card.imageSrc}>
-                    <CardRelatedContainer>
+                    {/* <CardRelatedContainer>
                       <CardRelated>
                         <StarIcon />
                         {card.related}
                       </CardRelated>
                       <CardReview>({card.reviews})</CardReview>
-                    </CardRelatedContainer>
+                    </CardRelatedContainer> */}
                     <CardHoverOverlay
                       variants={{
                         hover: {

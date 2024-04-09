@@ -16,6 +16,9 @@ import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomerLoveIconImage from "images/simple-icon.svg";
 
+import pic1 from "images/work.jpg"
+import pic2 from "images/qw2.jpg"
+
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
   return (
@@ -27,7 +30,7 @@ export default () => {
         description="Our team combines advanced technology and expertise to provide state-of-the-art artificial intelligence products and services. With a deep understanding of AI technologies and their potential, we develop groundbreaking solutions that address complex challenges. Trust our AI company to provide you with pioneering advancements in the field and help drive your business forward."
         buttonRounded={false}
         primaryButtonText="See Portfolio"
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageSrc={pic1}
       />
       <MainFeature1
         subheading={<Subheading>Our Vision</Subheading>}
@@ -35,7 +38,7 @@ export default () => {
         description="Our team of dedicated professionals is committed to pushing boundaries and creating intelligent systems that enhance productivity, efficiency, and overall performance. We believe that AI and robotics have the potential to revolutionize the way we work and live, and we are determined to be at the forefront of this transformative journey."
         buttonRounded={false}
         primaryButtonText="Contact Us"
-        imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
+        imageSrc= {pic2}
         textOnLeft={false}
       />
       <Features

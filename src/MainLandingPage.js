@@ -14,7 +14,8 @@ import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePic
 //import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import Footer from "components/footers/FiveColumnDark.js";
 //import customerSupportIllustrationSrc from "images/customer-support-illustration.svg";
-import fr from "images/1_Innovation.jpeg"
+import fr from "images/hosh.jpg"
+import pic from "images/12.jpg"
 
 export default () => (
   <AnimationRevealPage>
@@ -43,8 +44,7 @@ export default () => (
           customerTitle: "Design New Product for a Bath tub."
         },
         {
-          imageSrc:
-            "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80",
+          imageSrc: pic,
           profileImageSrc:
             "https://avatar.iran.liara.run/public/16",
           quote:

@@ -109,6 +109,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Robatic from "pages/Robatic";
 import AboutUs from "pages/AboutUs";
 import ContactUs from "pages/ContactUs";
+import BlogIndex from "pages/BlogIndex";
 //import Login from "pages/Login";
 //import ContactUs from "pages/ContactUs";
 //import TermsOfService from "pages/TermsOfService";
@@ -132,6 +133,7 @@ export default function App() {
           <Route path="/Robatic" element={<Robatic />} />
           <Route path="/About" element={<AboutUs />} />
           <Route path="/Contact" element={<ContactUs />} />
+          <Route path="/Blog" element={<BlogIndex />} />
 
         </Routes>
       </Router>

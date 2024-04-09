@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
-import arm from "images/perfumm.jpg";
+import arm from "images/arm.png";
 import pack from "images/pack.jpg";
 import Urinanalysis from "images/Urinanalysis.jpg";
 //import ResponsiveVideoEmbed from "helpers/ResponsiveVideoEmbed.js";

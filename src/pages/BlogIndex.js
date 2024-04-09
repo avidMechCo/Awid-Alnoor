@@ -51,32 +51,65 @@ export default ({
   posts = [
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-      category: "Travel Tips",
-      date: "April 21, 2020",
-      title: "Safely Travel in Foreign Countries",
+        "https://media.nature.com/lw767/magazine-assets/d41586-024-00869-0/d41586-024-00869-0_26887752.jpg?as=webp",
+      category: "article",
+      date: "March 21, 2024",
+      title: "Google AI could soon use a person’s cough to diagnose disease",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      url: "https://timerse.com",
+        "A team led by Google scientists has developed a machine-learning tool that can help to detect and monitor health conditions by evaluating noises such as coughing and breathing. The artificial intelligence (AI) system1, trained on millions of audio clips of human sounds, might one day be used by physicians to diagnose diseases including COVID-19 and tuberculosis and to assess how well a person’s lungs are functioning.",
+      url: "https://www.nature.com/articles/d41586-024-00869-0",
       featured: true
     },
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
+    {
+      imageSrc:
+        "https://media.nature.com/lw767/magazine-assets/d41586-024-01042-3/d41586-024-01042-3_26908788.jpg?as=webp",
+      category: "career column",
+      date: "April 19, 2020",
+      title: "Three ways ChatGPT helps me in my academic writing",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      url: "https://www.nature.com/articles/d41586-024-01042-3"
+    },
+    {
+      imageSrc:
+        "https://media.nature.com/lw767/magazine-assets/d41586-024-01003-w/d41586-024-01003-w_26913780.jpg?as=webp",
+      category: "technology features",
+      date: "April 08, 2024",
+      title: "How generative AI aids in accessibility",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      url: "https://www.nature.com/articles/d41586-024-01003-w"
+    },
+    {
+      imageSrc:
+        "https://media.nature.com/lw767/magazine-assets/d41586-024-01002-x/d41586-024-01002-x_26937730.jpg?as=webp",
+      category: "career feature ",
+      date: "April 08, 2024",
+      title: "Ready or not, AI is coming to science education",
+      description:
+        "The world had never heard of ChatGPT when Johnny Chang started his undergraduate programme in computer engineering at the University of Illinois Urbana–Champaign in 2018. All that the public knew then about assistive artificial intelligence (AI) was that the technology powered joke-telling smart speakers or the somewhat fitful smartphone assistants.",
+      url: "https://www.nature.com/articles/d41586-024-01002-x"
+    },
+    {
+      imageSrc:
+        "https://media.nature.com/w1248/magazine-assets/d41586-024-00780-8/d41586-024-00780-8_26889926.jpg?as=webp",
+      category: "career feature ",
+      date: "March 26, 2024",
+      title: "How AI is improving climate forecasts",
+      description:
+        "The world had never heard of ChatGPT when Johnny Chang started his undergraduate programme in computer engineering at the University of Illinois Urbana–Champaign in 2018. All that the public knew then about assistive artificial intelligence (AI) was that the technology powered joke-telling smart speakers or the somewhat fitful smartphone assistants.",
+      url: "https://www.nature.com/articles/d41586-024-00780-8"
+    },
+    {
+      imageSrc:
+        "https://media.nature.com/lw767/magazine-assets/d41586-024-00639-y/d41586-024-00639-y_26807262.jpg?as=webp",
+      category: "career feature ",
+      date: "April 08, 2024",
+      title: "Why scientists trust AI too much,and what to do about",
+      description:
+        "The world had never heard of ChatGPT when Johnny Chang started his undergraduate programme in computer engineering at the University of Illinois Urbana–Champaign in 2018. All that the public knew then about assistive artificial intelligence (AI) was that the technology powered joke-telling smart speakers or the somewhat fitful smartphone assistants.",
+      url: "https://www.nature.com/articles/d41586-024-00639-y"
+    },
     getPlaceholderPost()
   ]
 }) => {

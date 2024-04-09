@@ -60,22 +60,22 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
+      <NavLink href="/About">
         About Us
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="/Blog">
         Blog
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="/AIservices">
         services
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="/Robatic">
         projects
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#">
-        Hire Us
+      <PrimaryLink href="/Contact">
+        Contact Us
       </PrimaryLink>
     </NavLinks>
   ];
@@ -96,7 +96,7 @@ export default () => {
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed
-              url="//player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=1&responsive=1"
+              url="/images/main_page/main.MP4"
               background="transparent"
             />
           </RightColumn>
