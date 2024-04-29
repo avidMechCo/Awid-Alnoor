@@ -6,6 +6,7 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import StatsIllustrationSrc from "images/stats-illustration.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
+//import AboutUs from "pages/AboutUs";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -48,7 +49,7 @@ export default ({
   ),
   description = "AwidalNoor Company, is archipreneur company that collaborates with prominent companies and experts in the fields of artificial intelligence ,and robotics. AwidAlnoor brings expertise by providing MLoPs, Devops,and Sas based on artificial intelligence to help businesses utilize this technology for growth and innovation.",
   primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonUrl = "/About",
   imageSrc = StatsIllustrationSrc,
   imageCss = null,
   imageContainerCss = null,

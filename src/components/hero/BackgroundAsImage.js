@@ -2,7 +2,8 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import backgroundImage from 'images/unnamed.jpg';
+import backgroundImage from 'images/esl.jpg';
+//import main_video from "images/main_page/main.mp4"
 
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import ResponsiveVideoEmbed from "helpers/ResponsiveVideoEmbed.js";
@@ -67,10 +68,10 @@ export default () => {
         Blog
       </NavLink>
       <NavLink href="/AIservices">
-        services
+        Services
       </NavLink>
       <NavLink href="/Robatic">
-        projects
+        Projects
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
@@ -87,21 +88,25 @@ export default () => {
         <StyledHeader links={navLinks} />
         <TwoColumn>
           <LeftColumn>
-            <Notification>We have now launched operations in Emarat.</Notification>
-            <Heading>
-              <span>Unleash power</span>
-              
-              <SlantedBackground>of AI.</SlantedBackground>
-            </Heading>
+
           </LeftColumn>
           <RightColumn>
-            <StyledResponsiveVideoEmbed
-              url="/images/main_page/main.MP4"
-              background="transparent"
-            />
+          <Notification><b>We have now launched operations in Emarat.</b></Notification>
+
+              <Heading>
+                <span>Unleash power</span>
+  
+                <SlantedBackground>of AI.</SlantedBackground>
+              </Heading>
+
+
+
           </RightColumn>
         </TwoColumn>
       </HeroContainer>
     </Container>
   );
 };
+
+
+//<video src= {main_video} type="video/mp4" width="750" height="500" controls/>

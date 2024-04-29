@@ -3,7 +3,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
-import Header from "components/headers/light.js";
+import Header from "components/headers/light2.js";
 import Footer from "components/footers/FiveColumnDark.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
@@ -29,8 +29,10 @@ export default () => {
         heading="Innovative AI solutions company."
         description="Our team combines advanced technology and expertise to provide state-of-the-art artificial intelligence products and services. With a deep understanding of AI technologies and their potential, we develop groundbreaking solutions that address complex challenges. Trust our AI company to provide you with pioneering advancements in the field and help drive your business forward."
         buttonRounded={false}
-        primaryButtonText="See Portfolio"
+        primaryButtonText="See our projects"
         imageSrc={pic1}
+        primaryButtonUrl= "/AIservices"
+
       />
       <MainFeature1
         subheading={<Subheading>Our Vision</Subheading>}
@@ -40,6 +42,7 @@ export default () => {
         primaryButtonText="Contact Us"
         imageSrc= {pic2}
         textOnLeft={false}
+        primaryButtonUrl= "/Contact"
       />
       <Features
         subheading={<Subheading>Our Values</Subheading>}

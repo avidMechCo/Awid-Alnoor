@@ -6,9 +6,9 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
 
 import LogoImage from "images/ICON.png";
-import { ReactComponent as GithubIcon } from "images/gitt.svg";
-import { ReactComponent as InstagramIcon } from "images/insta.svg";
-import { ReactComponent as LinkedinIcon } from "images/link.svg";
+//import { ReactComponent as GithubIcon } from "images/gitt.svg";
+//import { ReactComponent as InstagramIcon } from "images/insta.svg";
+//import { ReactComponent as LinkedinIcon } from "images/link.svg";
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8 `;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
@@ -42,7 +42,7 @@ const SocialLink = styled.a`
 
 const CopyrightAndCompanyInfoRow = tw.div`pb-0 text-sm font-normal flex flex-col sm:flex-row justify-between items-center`
 const CopyrightNotice = tw.div``
-const CompanyInfo = tw.div``
+//const CompanyInfo = tw.div``
 
 const SubscribeNewsletterColumn = tw(Column)`text-center lg:text-left w-full! lg:w-auto! mt-20 lg:mt-12`;
 const SubscribeNewsletterContainer = tw.div`max-w-sm mx-auto lg:mx-0 `;
@@ -106,7 +106,6 @@ export default () => {
                 <Link href="mailto:awidalnoor@gmail.com">awidalnoor@gmail.com</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/Contact">Contact Us</Link>
               </LinkListItem>
               {/* <LinkListItem>
                 <Link href="#">Report Abuse</Link>
@@ -128,8 +127,8 @@ export default () => {
         </FiveColumns>
         <Divider/>
         <CopyrightAndCompanyInfoRow>
-          <CopyrightNotice>&copy; Copyright 2020, Treact Inc.</CopyrightNotice>
-          <CompanyInfo>An Internet Company.</CompanyInfo>
+          <CopyrightNotice>&copy; Copyright 2024, AwidAlnoor Inc.</CopyrightNotice>
+
         </CopyrightAndCompanyInfoRow>
       </Content>
     </Container>

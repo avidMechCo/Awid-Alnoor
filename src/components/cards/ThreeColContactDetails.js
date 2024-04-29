@@ -87,7 +87,7 @@ export default ({ cards = null, heading = "Our Office", subheading = "Locations"
   if (!cards) cards = defaultCards;
 
   return (
-    <Container>
+    <center><Container>
       <ThreeColumnContainer>
         {subheading && <Subheading>{subheading}</Subheading>}
         <Heading>{heading}</Heading>
@@ -107,6 +107,6 @@ export default ({ cards = null, heading = "Our Office", subheading = "Locations"
         ))}
       </ThreeColumnContainer>
       <DecoratorBlob />
-    </Container>
+    </Container></center>
   );
 };

@@ -80,7 +80,7 @@ const topicNames = ["Computer Vision", "NLP", "Expert System", "Hybrid System"];
 
 export default ({
   service_id,
-  heading = "services",  
+  heading = "AI Services",  
 }) => {
   /*
    * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab

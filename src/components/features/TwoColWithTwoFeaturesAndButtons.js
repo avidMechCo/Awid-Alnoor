@@ -53,9 +53,9 @@ export default ({
       We have the most <span tw="text-primary-500">professional</span> AI team.
     </>
   ),
-  description = "Our team believes in harnessing the power of AI to revolutionize the archeology field. They develop smart tools and machines that can explore and analyze historical sites with minimal human intervention, reducing the risk of damage and enabling more accurate data collection. ",
-  primaryButtonText = "See Our Portfolio",
-  primaryButtonUrl = "https://timerse.com",
+  description = "Our team is created by experts in data science, machine learning, and AI research who are dedicated to creating tailored solutions that meet your specific requirements. Whether you require automation, predictive analytics, natural language processing, or computer vision, our team stays at the forefront of the latest advancements to deliver exceptional results. Partner with us today and unlock the transformative power of AI for your business.",
+  primaryButtonText = "Contact Us",
+  primaryButtonUrl = "/contact",
   features = null,
   textOnLeft = true
 }) => {
@@ -69,7 +69,7 @@ export default ({
     {
       Icon: pr,
       title: "Professionalism",
-      description: "We have the best professional in developing in computer vission methods, larg liguestic models, fine tuning,and deep learning models."
+      description: "We have the best professionals in developing computer vision methods, large linguistic models, fine-tuning, and deep learning models."
     }
   ];
 

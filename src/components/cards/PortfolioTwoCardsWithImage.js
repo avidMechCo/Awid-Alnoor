@@ -8,8 +8,8 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
 import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
-import bed from "images/poster-AVIDMED-2048x1448.jpg"
-import perfum from "images/perfum.jpg"
+import bed from "images/bed.png"
+import perfum from "images/perfum.png"
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -67,7 +67,9 @@ export default ({
   ),
   description = "Our mission is revolutionizing the way we live and work through the application of AI and machine learning technologies. Robotic designs from AwidAlnoor could cover a wide range of applications — from automating industrial processes to developing smart home devices or robotic personal assistants.",
   linkText = "View all Projects",
+  linkUrl = "/Robatic",
   cardLinkText = "See project",
+  cardLinkUrl = "/Robatic",
   textOnLeft = false
 }) => {
   const cards = [
@@ -75,19 +77,15 @@ export default ({
       imageSrc:
       bed,
       Project: "Comfort  smart bed.",
-      type: "Medicine",
-      title: "Personalized Ad Campaign using Google AdWords",
-      durationText: "720 Days production",
-      locationText: "Russia"
+      type: "Medical",
+      title:"Automatic beds for elderly and disabled"
     },
     {
       imageSrc:
       perfum,
       Project: "Automatic dispenser",
-      type: "perfume",
-      title: "Ranking #1 for keywords like Chocolate, Snack",
-      durationText: "90 Days production",
-      locationText: "UAE"
+      title:"Automatic rechargeable odour dispenser",
+      type: "mechanic"
     }
   ];
   return (
@@ -99,7 +97,7 @@ export default ({
               <Subheading>{subheading}</Subheading>
               <HeadingTitle>{headingHtmlComponent}</HeadingTitle>
               <HeadingDescription>{description}</HeadingDescription>
-              <PrimaryLink>
+              <PrimaryLink as="a" href={linkUrl}>
                 {linkText} <ArrowRightIcon />
               </PrimaryLink>
             </HeadingInfoContainer>
@@ -116,13 +114,12 @@ export default ({
                   <CardTitle>{card.title}</CardTitle>
                   <CardMeta>
                     <CardMetaFeature>
-                      <TimeIcon /> {card.durationText}
                     </CardMetaFeature>
                     <CardMetaFeature>
-                      <LocationIcon /> {card.locationText}
                     </CardMetaFeature>
                   </CardMeta>
-                  <CardAction>{cardLinkText}</CardAction>
+                  <br></br>
+                  <CardAction as="a" href={cardLinkUrl}>{cardLinkText}</CardAction>
                 </CardText>
               </Card>
             </CardColumn>
